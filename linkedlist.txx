@@ -15,8 +15,9 @@ LinkedList<T>::~LinkedList()
     Node* current = m_Head;
     while (current != nullptr)
     {
-        delete current;
-        current = current->next;
+		Node* next = current->next;
+	    delete current;
+        current = next;
     }
 }
 
